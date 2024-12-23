@@ -7,19 +7,17 @@ import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
 } from "firebase/auth";
-import React, { FormEvent, Fragment, useEffect, useState, useTransition } from "react";
+import React, { Fragment, useEffect, useState, useTransition } from "react";
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
-import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-function OtpLogin() {
+export default function OtpLogin() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const phoneNumber = searchParams.get('phone') || "";
@@ -194,5 +192,3 @@ function OtpLogin() {
     </div>
   );
 }
-
-export default OtpLogin;
