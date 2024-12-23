@@ -62,11 +62,10 @@ function OtpLogin() {
     startTransition(async () => {
       setError("");
 
-      const recaptchaVerifier = new RecaptchaVerifier(
-        auth, "recaptcha-container", { size: "invisible" }
-      );
-
       try {
+        const recaptchaVerifier = new RecaptchaVerifier(
+          auth, "recaptcha-container", { size: "invisible" }
+        );
         const confirmationResult = await signInWithPhoneNumber(auth, "+" + phoneNumber, recaptchaVerifier);
         setConfirmationResult(confirmationResult);
         setSuccess("OTP sent successfully.");
