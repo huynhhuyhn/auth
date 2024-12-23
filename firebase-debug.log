@@ -1,0 +1,38 @@
+[debug] [2024-12-23T05:23:01.985Z] ----------------------------------------------------------------------
+[debug] [2024-12-23T05:23:01.987Z] Command:       D:\Program Files\node.exe C:\Users\LENOVO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-12-23T05:23:01.987Z] CLI Version:   13.24.1
+[debug] [2024-12-23T05:23:01.987Z] Platform:      win32
+[debug] [2024-12-23T05:23:01.987Z] Node Version:  v20.17.0
+[debug] [2024-12-23T05:23:01.987Z] Time:          Mon Dec 23 2024 12:23:01 GMT+0700 (Indochina Time)
+[debug] [2024-12-23T05:23:01.988Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-23T05:23:01.993Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-23T05:23:01.993Z] > authorizing via signed-in user (huyhunhngc@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\otp-phone-authentication-demo-nextjs-firebase-auth
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-12-23T05:23:55.333Z] Checked if tokens are valid: false, expires at: 1731320458555
+[debug] [2024-12-23T05:23:55.334Z] Checked if tokens are valid: false, expires at: 1731320458555
+[debug] [2024-12-23T05:23:55.334Z] > refreshing access token with scopes: []
+[debug] [2024-12-23T05:23:55.336Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-23T05:23:55.336Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-23T05:23:55.625Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-12-23T05:23:55.625Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-23T05:23:55.639Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-12-23T05:23:56.289Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-12-23T05:23:56.290Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
