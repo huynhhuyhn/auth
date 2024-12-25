@@ -22,6 +22,7 @@ export default function OtpLogin() {
   const searchParams = useSearchParams();
   const phoneNumber = searchParams.get('phone') || "";
   const redirectUri = searchParams.get('redirect_uri') || "";
+  const fallbackUri = searchParams.get('fallback_uri') || "";
 
   const [otp, setOtp] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -96,10 +97,12 @@ export default function OtpLogin() {
         const idToken = credential.user.getIdToken();
         const refreshToken = credential.user.refreshToken;
         const uid = credential.user.uid;
-        const uri = `${redirectUri}?uid=${uid}&id_token=${idToken}&refresh_token=${refreshToken}`
-        console.log(`Launch ${uri}`);
-      
+        const uri = `${redirectUri}?uid=${uid}&id_token=${idToken}&refresh_token=${refreshToken}`;
+        const fallback_uri = `${fallbackUri}?uid=${uid}&id_token=${idToken}&refresh_token=${refreshToken}`;
         window.location.href = uri;
+        const response = await fetch(fallback_uri);
+
+        console.log(`Launch ${uri}`);
         router.replace("/");
       } catch (error) {
         console.log(error);
