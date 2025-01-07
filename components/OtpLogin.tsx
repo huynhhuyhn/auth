@@ -94,15 +94,13 @@ export default function OtpLogin() {
 
       try {
         const credential = await confirmationResult?.confirm(otp);
-        const idToken = credential.user.getIdToken();
+        const idToken = await credential.user.getIdToken();
         const refreshToken = credential.user.refreshToken;
         const uid = credential.user.uid;
         const uri = `${redirectUri}?uid=${uid}&id_token=${idToken}&refresh_token=${refreshToken}`;
         const fallback_uri = `${fallbackUri}?uid=${uid}&id_token=${idToken}&refresh_token=${refreshToken}`;
+        window.open(fallback_uri, "_blank", "noopener,noreferrer");
         window.location.href = uri;
-        const response = await fetch(fallback_uri);
-
-        console.log(`Launch ${uri}`);
         router.replace("/");
       } catch (error) {
         console.log(error);
